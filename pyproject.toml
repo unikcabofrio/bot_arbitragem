@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bot-arbitragem"
+version = "0.1.0"
+description = "Bot de arbitragem cripto com modo dry-run, controles de risco e adaptadores mock/CCXT."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+ccxt = ["ccxt>=4.3"]
+yaml = ["PyYAML>=6.0"]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+bot-arbitragem = "bot_arbitragem.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
