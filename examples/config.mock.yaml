@@ -1,0 +1,26 @@
+dry_run: true
+symbols:
+  - BTC/USDT
+quote_asset: USDT
+poll_interval_seconds: 5
+risk:
+  min_net_profit_pct: 0.20
+  max_trade_quote: 100
+  slippage_pct: 0.03
+exchanges:
+  - name: exchange_barata
+    adapter: mock
+    fee_rate: 0.001
+    mock_bid: 29950
+    mock_ask: 30000
+    balances:
+      USDT: 250
+      BTC: 0
+  - name: exchange_cara
+    adapter: mock
+    fee_rate: 0.001
+    mock_bid: 30200
+    mock_ask: 30250
+    balances:
+      USDT: 0
+      BTC: 0.01
